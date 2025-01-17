@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Comentario extends Model
 {
     //
+    protected $fillable = [
+        'post_id',
+        'user_id',
+        'comment_content'
+    ];
 
     public function post() {
         return $this->belongsTo(Post::class);
