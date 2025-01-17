@@ -7,6 +7,12 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Importante
+
+Puedes ejecutar "composer run ready-seed" para automáticamente poner a punto el servidor con install, migrate --seed y serve
+
+Puedes ejecutar "composer run ready" para automáticamente poner a punto el servidor con install, migrate y serve
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
