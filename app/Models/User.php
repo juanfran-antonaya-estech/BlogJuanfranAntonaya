@@ -50,10 +50,10 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
     public function comentarios() {
-        return $this->hasMany(Comentario::class);
+        return $this->hasMany(Comment::class);
     }
 
     public function productos() {
-        return $this->hasMany(Producto::class);
+        return $this->hasMany(Product::class);
     }
 }
