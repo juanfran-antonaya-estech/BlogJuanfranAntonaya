@@ -20,7 +20,7 @@ class PostFactory extends Factory
         return [
             'title' => $this->faker->text(20),
             'status' => $this->faker->boolean(),
-            'user_id' => User::all()->random()->id,
+            'user_id' => 0,
         ];
     }
 }

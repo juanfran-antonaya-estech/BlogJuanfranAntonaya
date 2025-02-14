@@ -8,7 +8,8 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.31",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "laravel/ui": "^4.6"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -53,11 +54,17 @@
         ],
         "ready-seed": [
             "composer install",
+            "npm install",
+            "cp ./.env.example ./.env",
+            "@php artisan @php artisan key:generate",
             "php artisan migrate:fresh --seed",
             "php artisan serve"
         ],
         "ready": [
             "composer install",
+            "npm install",
+            "cp ./.env.example ./.env",
+            "@php artisan @php artisan key:generate",
             "php artisan migrate:fresh",
             "php artisan serve"
         ]

@@ -22,7 +22,7 @@ class ProductFactory extends Factory
             'description' => $this->faker->text(200),
             'quantity' => $this->faker->numberBetween(1, 100),
             'status' => $this->faker->boolean(),
-            'seller_id' => User::all()->random()->id,
+            'user_id' => User::all()->random()->id,
         ];
     }
 }
