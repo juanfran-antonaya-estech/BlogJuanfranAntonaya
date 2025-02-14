@@ -11,7 +11,7 @@
 
 1. Define en .env.example la base de datos a la que se va a conectar.
 2. Ejecuta composer run ready-seed (run ready no hace seed a la base de datos)
-3. Ejecuta en otra terminal npm run dev
+3. Ejecuta en otra terminal npm install y npm run dev
 4. Abrir el enlace proporcionado por serve (definido por defecto como **127.0.0.1:8000**)
 
 ## Usuarios

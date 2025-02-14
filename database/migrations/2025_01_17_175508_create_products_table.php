@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('description', 255);
             $table->integer('quantity');
             $table->integer('status');
-            $table->unsignedBigInteger('seller_id')->index();
-            $table->foreign('seller_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id')->index();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

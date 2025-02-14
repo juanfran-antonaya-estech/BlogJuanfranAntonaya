@@ -53,21 +53,20 @@
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
         ],
         "ready-seed": [
-            "touch database/database.sqlite",
             "composer install",
-            "npm install",
-            "cp ./.env.example ./.env",
-            "@php artisan key:generate",
-            "@php artisan migrate:fresh --seed",
+            "@post-root-package-install",
+            "@post-create-project-cmd",
+            "composer update",
+            "@post-update-cmd",
+            "@php artisan db:seed",
             "@php artisan serve"
         ],
         "ready": [
-            "touch database/database.sqlite",
             "composer install",
-            "npm install",
-            "cp ./.env.example ./.env",
-            "@php artisan key:generate",
-            "@php artisan migrate:fresh",
+            "@post-root-package-install",
+            "@post-create-project-cmd",
+            "composer update",
+            "@post-update-cmd",
             "@php artisan serve"
         ]
     },

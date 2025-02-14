@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table->string('image')->after('name')->nullable();
-            $table->renameColumn('seller_id', 'user_id');
         });
     }
 
